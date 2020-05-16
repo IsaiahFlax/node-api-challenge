@@ -40,13 +40,39 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+    Express is just a Node.js module like any other module.
+
+    What can we do with Express? So many things! For example:
+
+    build web applications.
+    serve Single Page Applications (SPAs).
+    build RESTful web services that work with JSON.
+    serve static content, like HTML files, images, audio files, PDFs, and more.
+    power real-time applications using technologies like Web Sockets or WebRTC.
+
+    Routing is one of the main features of Express. Using routing we can map incoming requests to the appropriate request handler based on the URL and HTTP Method used.
+
 - [ ] Describe Middleware?
+
+    Express is a minimalist framework. It doesn’t provide everything out of the box, but using middleware we can add extra functionality to our application. Middleware provide a way to extend the features provided by the Express framework.
+
+    We can think of middleware as array of functions that get executed in the order they are introduced into the server code.
 
 - [ ] Describe a Resource?
 
+    everything is a resource.
+    each resource is accessible via a unique URI.
+    resources can have multiple representations.
+    communication happens over a stateless protocol (HTTP).
+    resource management happens via HTTP methods.
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+    Status 200
+
 - [ ] How can we partition our application into sub-applications?
+
+    Express Routers are a way to split an application into sub-applications to make it more modular and easier to maintain and reason about.
 
 ## Minimum Viable Product
 
