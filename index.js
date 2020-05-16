@@ -12,3 +12,22 @@ I need this code, but don't know where, perhaps should make some middleware, don
 
 Go code!
 */
+const express = require('express')
+const app = express()
+
+const projectRouter = require('./crud/projectscrud')
+
+
+
+const port = process.env.PORT || 3000
+
+
+app.use(express.json())
+
+app.get('/', (req, res) => res.send('Hello World'))
+
+app.use('/api/projects', projectRouter)
+
+app.listen(port, () => {
+  console.log(`App is listening to port ${port}`)
+})
