@@ -5,7 +5,7 @@ const router = express.Router()
 const projectModel = require('../data/helpers/projectModel')
 
 const actionRouter = require('./actionscrud')
-router.use('/:id/actions', actionRouter)
+router.use('/:id/actions', IdPasser, actionRouter)
 
 router.get("/", (req, res) => {
     // do your magic!
@@ -76,5 +76,12 @@ router.get("/", (req, res) => {
       }         
       ).catch()
   })
+
+  function IdPasser(req, res, next) {
+    const { id } = req.params
+    req.projectId = id
+    console.log(id)
+    next()
+  }
 
   module.exports = router
